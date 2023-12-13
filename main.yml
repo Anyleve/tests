@@ -1,0 +1,32 @@
+name: Tests
+on:
+   # События, которые запускают jobs
+    push:
+      branches: [ "main" ]
+    pull_request:
+      branches: [ "main" ]
+
+# jobs запускаются параллельно, если не указана последовательность
+jobs:
+    # Название job вы можете назвать как угодно
+    my_build_job:
+      # Операционная система в виртуальной машине, в которой запускаются процессы
+      runs-on: ubuntu-latest, windows-latest
+        # Шаги
+        steps:
+          # Actions от github: проверяет репозиторий, гит и т.д.
+          - uses: actions/checkout@v3
+
+          # Пример однолинейного простого скрипта shell
+          - name: testing circle
+            run: unittest_circle.py
+
+          # Пример многолинейного скрипта shell
+          - name: testing rectangle
+            run: unittest_rectangle.py
+
+          - name: testing square
+            run: unittest_square.py
+
+          - name: testing triangle
+            run: unittest_triangle.py
