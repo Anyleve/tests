@@ -16,3 +16,15 @@ jobs:
 
     - name: Запуск на ${{ matrix.os }}
       run: echo "Запуск на ${{ matrix.os }}"
+      
+    - name: testing circle
+      run: python unittest_circle.py
+
+    - name: testing rectangle
+      run: python unittest_rectangle.py
+
+    - name: testing square
+      run: python unittest_square.py
+
+    - name: testing triangle
+      run: python unittest_triangle.py
