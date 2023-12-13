@@ -11,7 +11,7 @@ jobs:
     # Название job вы можете назвать как угодно
     my_build_job:
       # Операционная система в виртуальной машине, в которой запускаются процессы
-      runs-on: ubuntu-latest, windows-latest
+      runs-on: ubuntu-latest
         # Шаги
         steps:
           # Actions от github: проверяет репозиторий, гит и т.д.
